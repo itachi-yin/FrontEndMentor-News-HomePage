@@ -1,0 +1,8 @@
+// BASIC FLEX PROPERTIES
+@mixin flex-Prop($display,$flex-dir,$jc,$ai){
+    display: $display;
+    flex-direction: $flex-dir;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
