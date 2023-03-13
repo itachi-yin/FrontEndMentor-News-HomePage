@@ -6,3 +6,27 @@
     align-items: $ai;
 }
 
+
+// Basically For Main Section
+
+@import "var";
+
+@mixin main-margin($margin){
+    margin: $margin;
+    // padding: 2rem;
+}
+
+@mixin new-stuff($color,$margin,$padding,$fontsize,$fontW){
+    color: $color;
+    margin: $margin;
+    padding: $padding;
+    font-size: $fontsize;
+    font-weight: $fontW;
+}
+
+
+
+
+
+
+
