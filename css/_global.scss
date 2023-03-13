@@ -67,16 +67,20 @@ body{
 
 .main{
     width: 100%;
+    // height: 50%;
     border: 1px solid lime;
     display: grid;
-    grid-template-columns: repeat(2,minmax(70rem,1fr));
+    grid-template-columns: repeat(4,minmax(20rem,1fr));
+    // grid-template-rows: repeat(2,minmax(20rem,1fr));
+    
+    
 
 
 
 
     .wallpaperPc{
         border: 1px solid blue;
-        width: 60%;
+        grid-column: 1/4;
 
         img{
             display: inline-block;
@@ -84,10 +88,15 @@ body{
         }
     }
 
+    .New-thing{
+        border: 1px solid mediumvioletred;
+        grid-row: span 2;
+    }
+
 
     .main-heading{
         border: 1px solid lawngreen;
-        width: 30%;
+        
 
         h1{
             font-size: 5rem;
@@ -98,7 +107,8 @@ body{
 
     .main-para{
         border: 1px solid magenta;
-        width: 30%;
+        grid-column: 2 / span 2;
+        
 
         p{
             font-size: 2rem;
@@ -117,11 +127,7 @@ body{
 
 
 
-    .New-thing{
-        border: 1px solid mediumvioletred;
-        width: 40%;
-        height: 100%;
-    }
+    
 
 
 
