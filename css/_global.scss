@@ -96,14 +96,23 @@ body{
         border: 1px solid mediumvioletred;
         grid-row: span 2;
         @include main-margin(2rem);
-        background-color: $col2_2;
+        background-color: black;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
 
         .new-stuff{
             text-align: start;
-            @include new-stuff(white,2rem,2rem,1.2rem,400);
-            border: 1px solid white;
+            @include new-stuff(white,2rem,1.4rem,1.2rem,100);
+            padding-left: 0rem;
+            // border: 1px solid white;
+            border-bottom: 1px solid yellow;
 
             .new-stuff-1{
+
+                
                 h1{
                     font-size: 3rem;
                 }
@@ -117,10 +126,12 @@ body{
 
     .main-heading{
         border: 1px solid lawngreen;
+        height: 20rem;
+        @include main-margin(2rem);
         
 
         h1{
-            font-size: 5rem;
+            font-size: 4rem;
         }
     }
 
@@ -131,19 +142,28 @@ body{
         grid-column: 2 / span 2;
         place-self: start center;
         @include main-margin(2rem);
+        height: 20rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
         
 
         p{
             font-size: 2rem;
+            text-align:start;
+            margin-bottom: 1.3rem;
         }
 
         a{
             display: inline-block;
             background-color: black;
             font-size: 2rem;
-            padding: 2rem 4rem;
+            padding: 1.5rem 2.5rem;
             color: white;
             text-decoration: none;
+            width: 40%;
         }
     }
 
