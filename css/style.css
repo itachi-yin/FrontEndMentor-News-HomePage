@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  border: 2px solid black;
+  border: 4px solid black;
   max-width: 70vw;
 }
 
@@ -90,6 +90,7 @@ body {
   font-size: 3rem;
 }
 .main .main-heading {
+  place-self: center start;
   border: 1px solid lawngreen;
   height: 20rem;
   margin: 2rem;
@@ -100,7 +101,7 @@ body {
 .main .main-para {
   border: 1px solid magenta;
   grid-column: 2/span 2;
-  place-self: start center;
+  place-self: center start;
   margin: 2rem;
   height: 20rem;
   display: flex;
@@ -121,4 +122,29 @@ body {
   color: white;
   text-decoration: none;
   width: 40%;
+}
+
+.last-sec {
+  max-width: 70vw;
+  border: 2px solid lime;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.last-sec .last-box {
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-shrink: 1;
+  flex-basis: 50rem;
+}
+.last-sec .last-box img {
+  width: 15rem;
+  border: 2px solid purple;
+  display: inline-block;
+  grid-row: 1/-4;
+}
+.last-sec .last-box h3, .last-sec .last-box h4, .last-sec .last-box p {
+  place-self: center start;
 }/*# sourceMappingURL=style.css.map */
