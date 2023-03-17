@@ -26,7 +26,7 @@ body{
 }
 
 .header{
-    border: 1px solid red;
+    // border: 1px solid red;
     padding: 2rem;
     padding-bottom: 4rem;
     @include flex-Prop(flex,row,space-between,center);
@@ -69,7 +69,7 @@ body{
     width: 100%;
     
     // height: 50%;
-    border: 1px solid lime;
+    // border: 1px solid lime;
     display: grid;
     grid-template-columns: repeat(4,minmax(20rem,1fr));
     grid-template-rows: repeat(auto-fill,minmax(5rem,1fr));
@@ -82,7 +82,7 @@ body{
 
 
     .wallpaperPc{
-        border: 1px solid blue;
+        // border: 1px solid blue;
         grid-column: 1/4;
         @include main-margin(2rem);
 
@@ -93,7 +93,7 @@ body{
     }
 
     .New-thing{
-        border: 1px solid mediumvioletred;
+        // border: 1px solid mediumvioletred;
         grid-row: span 2;
         @include main-margin(2rem);
         background-color: black;
@@ -127,7 +127,7 @@ body{
     .main-heading{
 
         place-self: center start;
-        border: 1px solid lawngreen;
+        // border: 1px solid lawngreen;
         height: 20rem;
         @include main-margin(2rem);
         
@@ -140,7 +140,7 @@ body{
 
 
     .main-para{
-        border: 1px solid magenta;
+        // border: 1px solid magenta;
         grid-column: 2 / span 2;
         place-self: center start;
         @include main-margin(2rem);
@@ -180,9 +180,10 @@ body{
 .last-sec{
     
     max-width: 70vw;
-    border: 2px solid lime;
+    // border: 2px solid lime;
 
-    @include flex-Prop(flex,row,space-between,center);
+    @include flex-Prop(flex,row,space-around,center);
+    grid-gap: 4rem;
     
     
 
@@ -191,21 +192,34 @@ body{
 
     // Individual Box's
     .last-box{
-        border: 2px solid black;
+        // border: 2px solid black;
         display: grid;
         grid-template-columns: repeat(2,1fr);
         flex-shrink: 1;
         flex-basis: 50rem;
+        
 
         img{
             width: 15rem;
-            border: 2px solid purple;
+            // border: 2px solid purple;
             display: inline-block;
             grid-row: 1 / -4;
         }
 
         h3,h4,p{
             place-self: center start;
+        }
+
+        h3{
+            font-size: 4rem;
+        }
+
+        h4{
+            font-size: 1.4rem;
+        }
+
+        p{
+            font-size: 1.3rem;
         }
 
         

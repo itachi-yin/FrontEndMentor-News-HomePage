@@ -20,7 +20,6 @@ body {
 }
 
 .header {
-  border: 1px solid red;
   padding: 2rem;
   padding-bottom: 4rem;
   display: flex;
@@ -50,7 +49,6 @@ body {
 
 .main {
   width: 100%;
-  border: 1px solid lime;
   display: grid;
   grid-template-columns: repeat(4, minmax(20rem, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
@@ -58,7 +56,6 @@ body {
   text-align: center;
 }
 .main .wallpaperPc {
-  border: 1px solid blue;
   grid-column: 1/4;
   margin: 2rem;
 }
@@ -67,7 +64,6 @@ body {
   width: 100%;
 }
 .main .New-thing {
-  border: 1px solid mediumvioletred;
   grid-row: span 2;
   margin: 2rem;
   background-color: black;
@@ -91,7 +87,6 @@ body {
 }
 .main .main-heading {
   place-self: center start;
-  border: 1px solid lawngreen;
   height: 20rem;
   margin: 2rem;
 }
@@ -99,7 +94,6 @@ body {
   font-size: 4rem;
 }
 .main .main-para {
-  border: 1px solid magenta;
   grid-column: 2/span 2;
   place-self: center start;
   margin: 2rem;
@@ -126,14 +120,13 @@ body {
 
 .last-sec {
   max-width: 70vw;
-  border: 2px solid lime;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  grid-gap: 4rem;
 }
 .last-sec .last-box {
-  border: 2px solid black;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   flex-shrink: 1;
@@ -141,10 +134,18 @@ body {
 }
 .last-sec .last-box img {
   width: 15rem;
-  border: 2px solid purple;
   display: inline-block;
   grid-row: 1/-4;
 }
 .last-sec .last-box h3, .last-sec .last-box h4, .last-sec .last-box p {
   place-self: center start;
+}
+.last-sec .last-box h3 {
+  font-size: 4rem;
+}
+.last-sec .last-box h4 {
+  font-size: 1.4rem;
+}
+.last-sec .last-box p {
+  font-size: 1.3rem;
 }/*# sourceMappingURL=style.css.map */
