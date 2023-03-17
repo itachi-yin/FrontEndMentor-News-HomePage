@@ -19,7 +19,7 @@ body{
 }
 
 .container{
-    border: 4px solid black;
+    // border: 4px solid black;
     max-width: 70vw;
     // height: 70rem;
     
@@ -71,10 +71,11 @@ body{
     // height: 50%;
     // border: 1px solid lime;
     display: grid;
-    grid-template-columns: repeat(4,minmax(20rem,1fr));
-    grid-template-rows: repeat(auto-fill,minmax(5rem,1fr));
-    justify-items: center;
-    text-align: center;
+    grid-template-columns: repeat(3,minmax(20rem,1fr));
+    grid-gap: 2rem;
+
+
+    
     
     
 
@@ -83,8 +84,9 @@ body{
 
     .wallpaperPc{
         // border: 1px solid blue;
-        grid-column: 1/4;
-        @include main-margin(2rem);
+        grid-column: span 2;
+       
+        
 
         img{
             display: inline-block;
@@ -95,13 +97,8 @@ body{
     .New-thing{
         // border: 1px solid mediumvioletred;
         grid-row: span 2;
-        @include main-margin(2rem);
         background-color: black;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        @include flex-Prop(flex,column,space-evenly,center);
 
         .new-stuff{
             text-align: start;
@@ -126,14 +123,12 @@ body{
 
     .main-heading{
 
-        place-self: center start;
-        // border: 1px solid lawngreen;
-        height: 20rem;
-        @include main-margin(2rem);
+       
+        
         
 
         h1{
-            font-size: 4rem;
+            font-size: 5rem;
         }
     }
 
@@ -141,19 +136,12 @@ body{
 
     .main-para{
         // border: 1px solid magenta;
-        grid-column: 2 / span 2;
-        place-self: center start;
-        @include main-margin(2rem);
-        height: 20rem;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        
+        @include flex-Prop(flex,column,space-evenly,flex-start);
+
 
         p{
-            font-size: 2rem;
+            font-size: 1.5rem;
             text-align:start;
             margin-bottom: 1.3rem;
         }
@@ -161,11 +149,12 @@ body{
         a{
             display: inline-block;
             background-color: black;
-            font-size: 2rem;
+            font-size: 1.4rem;
             padding: 1.5rem 2.5rem;
             color: white;
             text-decoration: none;
             width: 40%;
+            text-align: center;
         }
     }
 
@@ -177,13 +166,8 @@ body{
 }
 
 // last section
-.last-sec{
-    
-    max-width: 70vw;
-    // border: 2px solid lime;
 
-    @include flex-Prop(flex,row,space-around,center);
-    grid-gap: 4rem;
+    
     
     
 
@@ -192,34 +176,49 @@ body{
 
     // Individual Box's
     .last-box{
-        // border: 2px solid black;
+        
+        // border: 1px solid red;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        flex-shrink: 1;
-        flex-basis: 50rem;
+        grid-template-columns: repeat(2,minmax(5rem,1fr));
+        grid-template-rows: repeat(2,minmax(1rem,1fr));
+        
+
+
+        
+        
         
 
         img{
             width: 15rem;
+            grid-row: span 4;
             // border: 2px solid purple;
             display: inline-block;
-            grid-row: 1 / -4;
+            
         }
 
-        h3,h4,p{
-            place-self: center start;
-        }
+        // h3,h4,p{
+            
+            
+            
+        // }
 
         h3{
             font-size: 4rem;
+            // grid-row: span 2;
+            
+            
         }
 
         h4{
             font-size: 1.4rem;
+            
+            
         }
 
         p{
             font-size: 1.3rem;
+            
+            
         }
 
         
@@ -228,4 +227,3 @@ body{
 
     }
     
-}
