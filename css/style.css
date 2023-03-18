@@ -138,7 +138,7 @@ body {
 .last-box {
   display: grid;
   grid-template-columns: repeat(2, minmax(5rem, 1fr));
-  grid-template-rows: repeat(2, minmax(1rem, 1fr));
+  grid-template-rows: repeat(3, minmax(1rem, 1fr));
 }
 .last-box img {
   width: 15rem;
@@ -148,10 +148,13 @@ body {
 .last-box h3 {
   font-size: 4rem;
   color: #900C3F;
+  place-self: start start;
 }
 .last-box h4 {
   font-size: 1.4rem;
+  place-self: center start;
 }
 .last-box p {
   font-size: 1.3rem;
+  place-self: start start;
 }/*# sourceMappingURL=style.css.map */
