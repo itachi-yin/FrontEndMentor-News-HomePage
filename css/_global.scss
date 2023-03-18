@@ -15,23 +15,34 @@ html{
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: $col1;
+    background-color: white;
 }
 
 .container{
     // border: 4px solid black;
     max-width: 70vw;
     // height: 70rem;
+    margin: 2rem auto;
+
     
 }
 
 .header{
     // border: 1px solid red;
-    padding: 2rem;
+    padding: 2rem 0rem;
     padding-bottom: 4rem;
     @include flex-Prop(flex,row,space-between,center);
     
+
+
+    // .logo{
+        
+    //     // border: 1px solid red;
+        
+    // }
+    
     .navBar{
+        
         // border: 1px solid lawngreen;
         width: 50%;
         
@@ -48,7 +59,7 @@ body{
 
             // LI
             .navBtn{
-                color: white;
+                color: $col2_2;
                 transition: all 0.3s ease-in-out;
 
                 
@@ -56,7 +67,7 @@ body{
 
             // BUTTON HOVER EFFECTS
             .navBtn:hover{
-                color: yellow;
+                color: $col3;
             }
 
 
@@ -97,23 +108,58 @@ body{
     .New-thing{
         // border: 1px solid mediumvioletred;
         grid-row: span 2;
-        background-color: black;
-        @include flex-Prop(flex,column,space-evenly,center);
+        background-color: $col4;
+        @include flex-Prop(flex,column,space-between,center);
+
+        .new-stuff-1{
+
+            // border: 1px solid green;
+            
+                
+            h1{
+                font-size: 4rem; 
+                margin-bottom: 1rem;
+                color: $col2_4; 
+
+            }
+            
+        }
+
+        
 
         .new-stuff{
             text-align: start;
-            @include new-stuff(white,2rem,1.4rem,1.2rem,100);
+            @include new-stuff(white,2rem,1rem,1.2rem,100);
             padding-left: 0rem;
             // border: 1px solid white;
-            border-bottom: 1px solid yellow;
+            border-bottom: 1px solid $col3;
 
-            .new-stuff-1{
+            h3{
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                color: $col2;
+                font-weight: 200;
 
-                
-                h1{
-                    font-size: 3rem;
-                }
+                transition: color 0.2s ease-in-out;
             }
+
+            h3:hover{
+                color: $col1;
+                cursor: pointer;
+
+            }
+
+            p{
+                font-size: 1.6rem;
+                margin-bottom: 3rem;
+                color: white;
+                font-weight: 400;
+            }
+            
+        }
+
+        .new-stuff-3{
+            border-bottom: none;
         }
 
 
@@ -129,6 +175,10 @@ body{
 
         h1{
             font-size: 5rem;
+
+            span{
+                color: $col4;
+            }
         }
     }
 
@@ -148,13 +198,19 @@ body{
 
         a{
             display: inline-block;
-            background-color: black;
+            background-color: $col4;
             font-size: 1.4rem;
             padding: 1.5rem 2.5rem;
             color: white;
             text-decoration: none;
             width: 40%;
             text-align: center;
+
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover{
+            color: $col2;
         }
     }
 
@@ -181,6 +237,7 @@ body{
         display: grid;
         grid-template-columns: repeat(2,minmax(5rem,1fr));
         grid-template-rows: repeat(2,minmax(1rem,1fr));
+        // text-align: center;
         
 
 
@@ -205,6 +262,8 @@ body{
         h3{
             font-size: 4rem;
             // grid-row: span 2;
+            color: $col4;
+            
             
             
         }
