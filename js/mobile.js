@@ -1,15 +1,18 @@
 console.log('hello');
 
 // selectors 
-
+const container = document.querySelector('.container');
 const header = document.querySelector('.header');
 const navBarPc = document.querySelector('.navBar');
+
+
 
 console.log(navBarPc);
 
 // Media Queries
 
 const width1 = window.matchMedia('(max-width: 900px)');
+
 
 const widthChange = function(width) {
 
@@ -25,6 +28,8 @@ const widthChange = function(width) {
     }
     
 }
+
+
 
 widthChange(width1); // We Have To Run The Function For The First Time!
 
@@ -44,9 +49,31 @@ function hamburger(){
 
     navBtnMob.classList.toggle('opacity-0');
     hamburgerBar.classList.toggle('icon');
+    
+
+}
+
+// When Width Is Above 901px
+
+const width2 = window.matchMedia('(min-width: 901px)');
+
+const widthChange2 = function(width) {
+
+    if(width.matches){
+        navBarMob.remove();
+        console.log(`i have to fucking remove it now`);
+
+    }
+    else{
+        console.log(`let it be there!`);
+    }
+    
 }
 
 
+widthChange2(width2);
+
+width2.addListener(widthChange2);
 
 
 

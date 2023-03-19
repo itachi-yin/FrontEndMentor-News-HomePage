@@ -12,8 +12,10 @@
 
 @media only screen and (max-width: '400px'){
 
+    // Header - Nav Area
+
     .logo{
-        border: 1px solid greenyellow;
+        // border: 1px solid greenyellow;
     }
 
     .container{
@@ -21,15 +23,43 @@
     }
     .header{
 
-        border: 1px solid lime;
+        // border: 1px solid lime;
         width: 90vw;
         
 
     }
+
+    // Main Section
+
+
+    .main{
+        display: flex;
+        flex-direction: column;
+
+
+        .wallpaperPc{
+            content: url(/assets/images/image-web-3-mobile.jpg);
+        }
+    
+
+        .New-thing{
+            order: 4;
+        }
+
+        
+
+        .last-box{
+            order: 5;
+        }
+    }
+
+
+
+
 }
 
 .nav-btn-m{
-    border: 1px solid red;
+    // border: 1px solid red;
     // width: 100vw;
     height: 100vh;
     background-color: $col2;
@@ -71,21 +101,31 @@
     right: 100;
     transform: translateX(15rem);
 
+    
+    transition: 0.3s ease-in-out;
+
 
     .nav-btns-m li{
-        border: 1px solid green;
+        // border: 1px solid green;
         margin: 1rem;
         padding: 1rem;
+        list-style: none;
+        font-size: 2rem;
+
+        transition: 0.3s ease-in-out;
+        color: white;
+
+        
     }
+
+    .nav-btns-m li:hover{
+        color: $col4;
+    }
+
+
 }
 
 
-
-.nav-btn-m ul li{
-    list-style: none;
-    font-size: 2rem;
-
-}
 
 
 // Hamburger Bar Movements On Click

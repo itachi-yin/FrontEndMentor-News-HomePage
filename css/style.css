@@ -30,6 +30,7 @@ body {
 }
 .header .navBar {
   width: 50%;
+  z-index: 101;
 }
 .header .navBar .nav-btns {
   list-style: none;
@@ -190,6 +191,7 @@ body {
 }
 .header .navBar {
   width: 50%;
+  z-index: 101;
 }
 .header .navBar .nav-btns {
   list-style: none;
@@ -329,19 +331,27 @@ body {
 }
 
 @media only screen and (max-width: 400px) {
-  .logo {
-    border: 1px solid greenyellow;
-  }
   .container {
     max-width: 90vw;
   }
   .header {
-    border: 1px solid lime;
     width: 90vw;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .main .wallpaperPc {
+    content: url(/assets/images/image-web-3-mobile.jpg);
+  }
+  .main .New-thing {
+    order: 4;
+  }
+  .main .last-box {
+    order: 5;
   }
 }
 .nav-btn-m {
-  border: 1px solid red;
   height: 100vh;
   background-color: #FFCAC2;
 }
@@ -375,16 +385,18 @@ body {
   left: 0;
   right: 100;
   transform: translateX(15rem);
+  transition: 0.3s ease-in-out;
 }
 .nav-btn-m .nav-btns-m li {
-  border: 1px solid green;
   margin: 1rem;
   padding: 1rem;
-}
-
-.nav-btn-m ul li {
   list-style: none;
   font-size: 2rem;
+  transition: 0.3s ease-in-out;
+  color: white;
+}
+.nav-btn-m .nav-btns-m li:hover {
+  color: #900C3F;
 }
 
 .bar {
