@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 *, *::after, *::before {
   margin: 0%;
   padding: 0%;
@@ -157,4 +158,212 @@ body {
 .last-box p {
   font-size: 1.3rem;
   place-self: start start;
+}
+
+*, *::after, *::before {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+}
+
+.container {
+  max-width: 70vw;
+  margin: 2rem auto;
+}
+
+.header {
+  padding: 2rem 0rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .navBar {
+  width: 50%;
+}
+.header .navBar .nav-btns {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.header .navBar .nav-btns .navBtn {
+  color: #372948;
+  transition: all 0.3s ease-in-out;
+}
+.header .navBar .nav-btns .navBtn:hover {
+  color: #FC9D9D;
+}
+
+.main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(20rem, 1fr));
+  grid-gap: 2rem;
+}
+.main .wallpaperPc {
+  grid-column: span 2;
+}
+.main .wallpaperPc img {
+  display: inline-block;
+  width: 100%;
+}
+.main .New-thing {
+  grid-row: span 2;
+  background-color: #900C3F;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .New-thing .new-stuff-1 h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #FFECEF;
+}
+.main .New-thing .new-stuff {
+  text-align: start;
+  color: white;
+  margin: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 100;
+  padding-left: 0rem;
+  border-bottom: 1px solid #FC9D9D;
+}
+.main .New-thing .new-stuff h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #FFCAC2;
+  font-weight: 200;
+  transition: color 0.2s ease-in-out;
+}
+.main .New-thing .new-stuff h3:hover {
+  color: #CCAFAF;
+  cursor: pointer;
+}
+.main .New-thing .new-stuff p {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  color: white;
+  font-weight: 400;
+}
+.main .New-thing .new-stuff-3 {
+  border-bottom: none;
+}
+.main .main-heading h1 {
+  font-size: 5rem;
+}
+.main .main-heading h1 span {
+  color: #900C3F;
+}
+.main .main-para {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.main .main-para p {
+  font-size: 1.5rem;
+  text-align: start;
+  margin-bottom: 1.3rem;
+}
+.main .main-para a {
+  display: inline-block;
+  background-color: #900C3F;
+  font-size: 1.4rem;
+  padding: 1.5rem 2.5rem;
+  color: white;
+  text-decoration: none;
+  width: 40%;
+  text-align: center;
+  transition: color 0.3s ease-in-out;
+}
+.main .main-para a:hover {
+  color: #FFCAC2;
+}
+
+.last-box {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(5rem, 1fr));
+  grid-template-rows: repeat(3, minmax(1rem, 1fr));
+}
+.last-box img {
+  width: 15rem;
+  grid-row: span 4;
+  display: inline-block;
+}
+.last-box h3 {
+  font-size: 4rem;
+  color: #900C3F;
+  place-self: start start;
+}
+.last-box h4 {
+  font-size: 1.4rem;
+  place-self: center start;
+}
+.last-box p {
+  font-size: 1.3rem;
+  place-self: start start;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 400px) {
+  .logo {
+    border: 1px solid greenyellow;
+  }
+  .container {
+    max-width: 90vw;
+  }
+  .header {
+    border: 1px solid lime;
+    width: 90vw;
+  }
+}
+.nav-btn-m {
+  border: 1px solid red;
+}
+
+.navBar-m #hamburgerBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 70px;
+  height: 60px;
+  background-color: black;
+  z-index: 100;
+  cursor: pointer;
+  position: relative;
+}
+.navBar-m #hamburgerBar .bar {
+  width: 70px;
+  height: 10px;
+  background-color: #900C3F;
+  border-radius: 20px;
+}
+
+.nav-btn-m {
+  position: absolute;
+  top: 100;
+}
+
+.nav-btn-m ul li {
+  list-style: none;
+  font-size: 2rem;
 }/*# sourceMappingURL=style.css.map */

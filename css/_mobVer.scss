@@ -1,0 +1,68 @@
+@import "global";
+@import "var";
+@import "mixins";
+
+.opacity-0{
+    opacity: 0;
+}
+
+@media only screen and (max-width: '400px'){
+
+    .logo{
+        border: 1px solid greenyellow;
+    }
+
+    .container{
+        max-width: 90vw;
+    }
+    .header{
+
+        border: 1px solid lime;
+        width: 90vw;
+        
+
+    }
+}
+
+.nav-btn-m{
+    border: 1px solid red;
+    
+}
+
+// Hamburger Menu
+
+.navBar-m #hamburgerBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 70px;
+    height: 60px;
+    background-color: black;
+    z-index: 100;
+    cursor: pointer;
+    position: relative;
+
+    & .bar{
+        width: 70px;
+        height: 10px;
+        background-color: $col4;
+        border-radius: 20px;
+    }
+
+}
+
+.nav-btn-m{
+    position: absolute;
+    top: 100;
+}
+
+
+
+.nav-btn-m ul li{
+    list-style: none;
+    font-size: 2rem;
+
+}
+
+
+
