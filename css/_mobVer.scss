@@ -2,6 +2,10 @@
 @import "var";
 @import "mixins";
 
+.opacity-1{
+    opacity: 1;
+}
+
 .opacity-0{
     opacity: 0;
 }
@@ -26,6 +30,9 @@
 
 .nav-btn-m{
     border: 1px solid red;
+    // width: 100vw;
+    height: 100vh;
+    background-color: $col2;
     
 }
 
@@ -35,15 +42,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 70px;
+    width: 60px;
     height: 60px;
-    background-color: black;
+    background-color: transparent;
     z-index: 100;
     cursor: pointer;
     position: relative;
 
+    transition: 0.3s ease-in-out;
+
     & .bar{
-        width: 70px;
+        width: 60px;
         height: 10px;
         background-color: $col4;
         border-radius: 20px;
@@ -52,8 +61,22 @@
 }
 
 .nav-btn-m{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
     position: absolute;
-    top: 100;
+    top: 0;
+    left: 0;
+    right: 100;
+    transform: translateX(15rem);
+
+
+    .nav-btns-m li{
+        border: 1px solid green;
+        margin: 1rem;
+        padding: 1rem;
+    }
 }
 
 
@@ -65,4 +88,21 @@
 }
 
 
+// Hamburger Bar Movements On Click
+
+.bar{
+    transition: 0.2s ease-in-out;
+}
+
+.icon .bar1{
+    transform: translateY(1.75rem) rotate(45deg);
+}
+
+.icon .bar2{
+    opacity: 0;
+}
+
+.icon .bar3{
+    transform: translateY(-1.75rem) rotate(-45deg);
+}
 

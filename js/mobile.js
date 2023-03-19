@@ -33,6 +33,8 @@ width1.addListener(widthChange); // It Will Work On State Changes, It Will Run A
 
 // Hamburger Menu
 
+const bars = document.querySelectorAll('.bar');
+const hamburgerBar = document.getElementById('hamburgerBar');
 const navBarMob = document.querySelector('.navBar-m');
 const navBtnMob = document.querySelector('.nav-btn-m');
 
@@ -41,9 +43,7 @@ const navBtnMob = document.querySelector('.nav-btn-m');
 function hamburger(){
 
     navBtnMob.classList.toggle('opacity-0');
-
-    
-
+    hamburgerBar.classList.toggle('icon');
 }
 
 
